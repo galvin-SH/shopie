@@ -8,6 +8,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { Outlet } from "react-router-dom";
 
+import { Button } from "flowbite-react";
 import Header from "./components/Header";
 
 const httpLink = createHttpLink({
@@ -33,6 +34,7 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <>
+                <Button />
                 <Header />
                 <Outlet />
             </>
