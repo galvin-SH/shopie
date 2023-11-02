@@ -20,7 +20,6 @@ function Nav() {
         <Navbar.Link as={Link} to="#">Services</Navbar.Link>
         <Navbar.Link as={Link} to="#">Pricing</Navbar.Link>
         <Navbar.Link as={Link} to="#">Contact</Navbar.Link>
-
         <Cart />
       </Navbar.Collapse>
     </Navbar>
