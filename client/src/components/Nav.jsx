@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Navbar } from "flowbite-react";
+import Cart from "../components/Cart";
 
 function Nav() {
   return (
@@ -19,6 +20,8 @@ function Nav() {
         <Navbar.Link as={Link} to="#">Services</Navbar.Link>
         <Navbar.Link as={Link} to="#">Pricing</Navbar.Link>
         <Navbar.Link as={Link} to="#">Contact</Navbar.Link>
+
+        <Cart />
       </Navbar.Collapse>
     </Navbar>
   );
