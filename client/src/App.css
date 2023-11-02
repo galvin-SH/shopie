@@ -44,3 +44,9 @@
 .read-the-docs {
     color: #888;
 }
+
+.pictures {
+    height: 200px;
+    width: 350px;
+    padding: 1em
+}
