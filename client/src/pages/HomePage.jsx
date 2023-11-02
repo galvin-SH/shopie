@@ -1,4 +1,8 @@
 const HomePage = () => {
-    return /*#__PURE__*/ React.createElement("div", null, "Home Page");
+    return (
+        <div>
+            <h1>Home Page</h1>
+        </div>
+    );
 };
 export default HomePage;

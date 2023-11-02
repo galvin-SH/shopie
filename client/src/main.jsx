@@ -7,6 +7,7 @@ import CategoryPage from "./pages/CategoryPage.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import StripePage from "./pages/StripePage.jsx";
+import Error from "./pages/Error.jsx";
 
 const router = createBrowserRouter([
     {
