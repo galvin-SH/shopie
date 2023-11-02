@@ -5,6 +5,17 @@ const typeDefs = `
     email: String
     password: String
   }
+  type Category {
+    _id: ID
+    categoryName: String
+  }
+  type Product {
+    _id: ID
+    productName: String
+    productDescription: String
+    productPrice: Float
+    productCategory: Category
+  }
 
   type Auth {
     token: ID!
@@ -13,6 +24,11 @@ const typeDefs = `
 
   type Query {
     getSingleUser: User
+    getAllUsers: [User]
+    getSingleCategory(categoryId: ID!): Category
+    getAllCategories: [Category]
+    getSingleProduct(productId: ID!): Product
+    getAllProducts: [Product]
   }
 
 
