@@ -10,6 +10,7 @@ import { Outlet } from "react-router-dom";
 
 import { Button } from "flowbite-react";
 import Header from "./components/Header";
+import Nav from "./components/Nav";
 
 const httpLink = createHttpLink({
     uri: "/graphql",
@@ -34,8 +35,8 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <>
-                <Button />
                 <Header />
+                <Nav />
                 <Outlet />
             </>
         </ApolloProvider>
