@@ -49,6 +49,20 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
+        createCategory: async (parent, { categoryName }) => {
+            return Category.create({ categoryName });
+        },
+        createProduct: async (
+            parent,
+            { productName, productDescription, productPrice, productCategory }
+        ) => {
+            return Product.create({
+                productName,
+                productDescription,
+                productPrice,
+                productCategory,
+            });
+        },
     },
 };
 
