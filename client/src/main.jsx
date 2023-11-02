@@ -8,7 +8,6 @@ import ProductPage from "./pages/ProductPage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import StripePage from "./pages/StripePage.jsx";
 import Error from "./";
-import "./index.css";
 
 const router = createBrowserRouter([{
 	path: "/",
@@ -38,14 +37,8 @@ const router = createBrowserRouter([{
 	{
 		path: "stripe",
 		element: <StripePage />,
-	},
-	{
-		path: "error",
-		element: <Error />,
-	},
-	],
-},
-]);
+	}],
+}]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
