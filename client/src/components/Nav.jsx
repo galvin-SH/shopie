@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Navbar } from "flowbite-react";
 import LogoWhite from "../assets/images/HAPPY-SNACKS-white.gif"
+import Cart from "../components/Cart";
 
 function Nav() {
   return (
