@@ -9,10 +9,11 @@ function Marquee() {
 
        <Product/>
        {/* <section className="sortingTab"> */}
-        <p> 
+        {/* <break>
+        </break> */}
+          {/* <section className="sortingTab">
 
-        </p>
-      
+          </section> */}
       {/* </section> */}
     </div>
    
