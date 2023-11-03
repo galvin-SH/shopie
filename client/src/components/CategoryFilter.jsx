@@ -8,7 +8,7 @@ const style = {
   borderStyle: "solid",
   borderWidth: "5px",
   float: "left",
-  width: "400px"
+  width: "400px",
 };
 
 // Still needs work done. Will come back to it
