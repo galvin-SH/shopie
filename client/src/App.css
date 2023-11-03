@@ -97,10 +97,10 @@
   }
   
   .bubble {
-    background-color: lightblue;
+    background-color: #f2f2f2;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,4 +110,5 @@
   .bubble img {
     max-width: 100%;
      border-radius: 50%;
+     
   }

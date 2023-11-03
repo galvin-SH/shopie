@@ -4,7 +4,7 @@ import Chips from "../assets/images/bubbles/Chips.png";
 import Candy from "../assets/images/bubbles/Candy.png";
 import Chocolate from "../assets/images/bubbles/Chocolate.png";
 import Drinks from "../assets/images/bubbles/Drinks.png";
-import Crackers from "../assets/images/bubbles/Cracker.png";
+import Crackers from "../assets/images/bubbles/Crackers.png";
 
 
 
@@ -14,7 +14,7 @@ function CategoryBubbles() {
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
           <img src={Candy} alt="Candy"
-            className="w-12" />
+            className="w-14" />
         </div>
         <p>
           CANDY
@@ -22,7 +22,7 @@ function CategoryBubbles() {
       </a>
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-          <img src={Chips} alt="Chips" className="w-12" />
+          <img src={Chips} alt="Chips" className="w-14" />
         </div>
         <p>
           CHIPS
@@ -30,7 +30,7 @@ function CategoryBubbles() {
       </a>
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-          <img src={Chocolate} alt="Chocolate" className="w-12" />
+          <img src={Chocolate} alt="Chocolate" className="w-14" />
         </div>
         <p>
           CHOCOLATE
@@ -38,7 +38,7 @@ function CategoryBubbles() {
       </a>
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-          <img src={Crackers} alt="Crackers" className="w-12" />
+          <img src={Crackers} alt="Crackers" className="w-14" />
         </div>
         <p>
           CRACKERS
@@ -46,7 +46,7 @@ function CategoryBubbles() {
       </a>
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-          <img src={Drinks} alt="Drinks" className="w-12" />
+          <img src={Drinks} alt="Drinks" className="w-14" />
         </div>
         <p>
           DRINKS
@@ -54,7 +54,7 @@ function CategoryBubbles() {
       </a>
       <a href="#" target="_blank">
         <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-          <img src={Savory} alt="Savory" className="w-12" />
+          <img src={Savory} alt="Savory" className="w-14" />
         </div>
         <p>
           SAVORY
