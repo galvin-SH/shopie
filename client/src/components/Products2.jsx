@@ -8,9 +8,8 @@ function Products2() {
         <>
             {data.map((item) => 
             (
-                <Card key={Math.random()} data={item} />
+                <Card className="" key={Math.random()} data={item} />
             )
-
             )}
         </>
     )

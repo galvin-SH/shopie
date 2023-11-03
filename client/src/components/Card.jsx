@@ -1,14 +1,20 @@
 import React from 'react';
 
+const styles = {
+    card: {
+       width: "150px"
+
+    }
+}
 
 function Card({data}) {
     console.log(data)
   return (
-    <div className="flex-col h-25 w-50 ">
+    <div className="border-zinc-400 border-1 rounded-xl shadow-gray-400 shadow-xl flex-col h-25 w-50 hover:bg-white-[50%] cursor-pointer">
         <div >
-        <img  className="" src={data.img}/>
+        <img  src={data.img}/>
         </div>
-        <h3 className="font-bold">
+        <h3 className="font-">
         {data.title}
         </h3>
         <p>

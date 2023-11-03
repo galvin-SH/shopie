@@ -2,14 +2,15 @@
 // category, price, decription
 
 // import { Card } from 'flowbite-react';
-'use client';
-import GummyCandy from '/Gummy-Candy.jpg';
-import Chips from '/chips.png';
-import Chocolate from '/chocolate.jpg';
-import Ramen from '/ramen.jpg';
-import SignUp from '../../public/signUp.png'
+// 'use client';
+// import GummyCandy from '/Gummy-Candy.jpg';
+// import Chips from '/chips.png';
+// import Chocolate from '/chocolate.jpg';
+// import Ramen from '/ramen.jpg';
+// import SignUp from '../../public/signUp.png'
 import Card from './Card';
 import data from './data.json';
+
 
 function Product() {
   return (
@@ -26,7 +27,7 @@ function Product() {
         {data.map((item) => 
             (
               <li key={Math.random()}>
-                <Card  data={item}/>
+                <Card data={item}/>
                 </li>
             )
             )}

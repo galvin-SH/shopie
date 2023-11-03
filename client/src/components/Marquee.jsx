@@ -1,19 +1,13 @@
-import { Carousel } from "flowbite-react";
+// import { Carousel } from "flowbite-react";
 // import { Link } from "react-router-dom";
 import  Product  from "./Product";
 
 
 function Marquee() {
   return (
-    <div className="hero-marquee">
-    <div className="hero-marquee__grid">
-     <div className= "hero-marquee-item lazyloaded">
+    <div className="" >
 
-   
        <Product/>
-
-       </div>
-    </div>
     </div>
   );
 }
