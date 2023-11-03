@@ -4,7 +4,8 @@ import React from 'react';
 function Card({ data }) {
     console.log(data)
     return (
-        <section className= "w-100% relative ">
+        <section >
+     
         <div className="border-zinc-400 border-1 rounded-xl shadow-gray-400 shadow-xl flex-col h-50 w-20 group   cursor-pointer relative ">
             <div >
                 <img className="rounded-xl " src={data.img} style={{ width: '100%', height: 'auto' }} />

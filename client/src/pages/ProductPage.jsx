@@ -1,9 +1,9 @@
-
+// import './app.css';
 const ProductPage = () => {
     return (
-        <div>
-           
-        </div>
+        <div className="content-box">
+        {/* Content goes here */}
+      </div>
     );
 };
 export default ProductPage;

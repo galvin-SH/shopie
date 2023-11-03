@@ -8,9 +8,9 @@
 } 
 
 #root {
-    max-width: 1280px;
+   
     margin: 0 auto;
-    padding: 2rem;
+   
     text-align: center;
 }
 
@@ -55,3 +55,35 @@
     width: 100px;
     padding: 1em
 }
+
+.content-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 70%;
+    height:fit-content;
+    float: right;
+    margin-top: 3em;
+    margin-right: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .marqueeBox {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+
+  }
+
+  .sortingTab {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 2em;
+
+  }

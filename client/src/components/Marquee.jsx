@@ -5,10 +5,17 @@ import  Product  from "./Product";
 
 function Marquee() {
   return (
-    <div className="" >
+    <div className="marqueeBox" >
 
        <Product/>
+       {/* <section className="sortingTab"> */}
+        <p> 
+
+        </p>
+      
+      {/* </section> */}
     </div>
+   
   );
 }
 
