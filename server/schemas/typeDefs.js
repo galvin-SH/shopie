@@ -15,6 +15,11 @@ const typeDefs = `
     productDescription: String
     productPrice: Float
     productCategory: Category
+    onSale: Boolean
+    saleFactor: Float
+    salePrice: Float
+    imageSrc: String
+    imagePath: String
   }
 
   type Auth {
@@ -36,7 +41,11 @@ const typeDefs = `
     createUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     createCategory(categoryName: String!): Category
-    createProduct(productName: String!, productDescription: String!, productPrice: Float!, productCategory: ID!): Product
+    updateCategory(categoryId: ID!, categoryName: String!): Category
+    deleteCategory(categoryId: ID!): Category
+    createProduct(productName: String!, productDescription: String!, productPrice: Float!, productCategory: ID!,onSale: Boolean,saleFactor: Float, imageSrc: String!): Product
+    updateProduct(productId: ID!, productName: String!, productDescription: String!, productPrice: Float!, productCategory: ID!): Product
+    deleteProduct(productId: ID!): Product
   }
 `;
 
