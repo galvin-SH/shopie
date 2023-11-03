@@ -1,16 +1,16 @@
  [
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/candy/hichew-fantasymix.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/candy/hichew-grapefruit.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/candy/hichew-peach.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
