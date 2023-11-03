@@ -20,6 +20,7 @@ function Nav() {
         <Navbar.Link as={Link} to="#">Menu</Navbar.Link>
         <Navbar.Link as={Link} to="#">Login</Navbar.Link>
         <Navbar.Link as={Link} to="#">Dark Mode</Navbar.Link>
+        <Cart />
       </Navbar.Collapse>
     </Navbar>
   );
