@@ -11,6 +11,7 @@ import Auth from '../utils/auth';
 
 function Nav() {
 	const [showModal, setShowModal] = useState(false);
+	console.log(Tabs);
 
 	return (
 		<>
@@ -37,17 +38,16 @@ function Nav() {
 			</Navbar>
 			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
 				<Modal.Header>
-					Login/Sign Up
+				<Tabs.Group aria-label="Default tabs" style="default">
+						<Tabs.Item active title="Login">
+							<LoginForm/>
+						</Tabs.Item>
+						<Tabs.Item title="Signup">
+							<SignUpForm/>
+						</Tabs.Item>
+					</Tabs.Group>
 				</Modal.Header>
 				<Modal.Body>
-					<Tabs aria-label="Default tabs" style="default">
-						<Tabs.Item active title="test1">
-							Example 1
-						</Tabs.Item>
-						<Tabs.Item title="test2">
-							Example 2
-						</Tabs.Item>
-					</Tabs>
 				</Modal.Body>
 			</Modal>
 		</>

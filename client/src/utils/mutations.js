@@ -9,15 +9,6 @@ export const CREATE_USER = gql`
         username
         email
         password
-        bookCount
-        savedBooks {
-          bookId
-          authors
-          description
-          image
-          link
-          title
-        }
       }
     }
   }
