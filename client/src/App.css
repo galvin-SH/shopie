@@ -8,9 +8,7 @@
 } 
 
 #root {
-   
     margin: 0 auto;
-   
     text-align: center;
 }
 
@@ -85,5 +83,6 @@
     border-radius: 8px;
     width: 100%;
     margin-top: 2em;
+    margin-bottom: 2em;
 
   }
