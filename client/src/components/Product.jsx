@@ -17,7 +17,7 @@ function Product() {
         
         {data.map((item) => 
             (
-              <li  key={Math.random()}>
+              <li key={Math.random()}>
                 <Card data={item}/>
                 </li>
             )

@@ -8,7 +8,6 @@ const HomePage = () => {
             <ProductPage />
         </div>
        
-    
     );
 };
 export default HomePage;
