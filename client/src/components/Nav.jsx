@@ -36,13 +36,20 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
-                <Modal.Header>
-                    Login/Sign Up
-                </Modal.Header>
-                <Modal.Body>
-
-                </Modal.Body>
-            </Modal>
+				<Modal.Header>
+					Login/Sign Up
+				</Modal.Header>
+				<Modal.Body>
+					<Tabs aria-label="Default tabs" style="default">
+						<Tabs.Item active title="test1">
+							Example 1
+						</Tabs.Item>
+						<Tabs.Item title="test2">
+							Example 2
+						</Tabs.Item>
+					</Tabs>
+				</Modal.Body>
+			</Modal>
 		</>
 	);
 }
