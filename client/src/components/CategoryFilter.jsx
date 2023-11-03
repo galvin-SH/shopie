@@ -9,7 +9,7 @@ const style = {
   borderWidth: "5px",
   float: "left",
   width: "400px",
-  height: "600px"
+  height: "650px"
 };
 
 // Still needs work done. Will come back to it
