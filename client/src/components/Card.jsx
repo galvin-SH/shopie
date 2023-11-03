@@ -32,12 +32,7 @@ function Card({data}) {
         <div >
         <img   className="rounded-xl" src={data.img} style={{ width: '100%', height: 'auto' }}/>
         </div>
-        <h3 className="font-bold">
-        {data.title}
-        </h3>
-        <p>
-        {data.description}
-        </p>
+        
     </div>
   )
 }

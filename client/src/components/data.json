@@ -15,17 +15,17 @@
     "description": "Try chips from around the world!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/drinks/mogumogu-lychee.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/savory/buldakramen-chickenkimchi.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/crackers/pretz-crispyfriendchicken.png",
     "title": "Late night cravings??",
     "description": "Try chips from around the world!"
     },
