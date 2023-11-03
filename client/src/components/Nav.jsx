@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Navbar } from "flowbite-react";
 import LogoWhite from "../assets/images/HAPPY-SNACKS-white.gif"
+import Cart from "../components/Cart";
 
 function Nav() {
   return (
@@ -19,6 +20,7 @@ function Nav() {
         <Navbar.Link as={Link} to="#">Menu</Navbar.Link>
         <Navbar.Link as={Link} to="#">Login</Navbar.Link>
         <Navbar.Link as={Link} to="#">Dark Mode</Navbar.Link>
+        <Cart/>
       </Navbar.Collapse>
     </Navbar>
   );

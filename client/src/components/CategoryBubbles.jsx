@@ -1,15 +1,27 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom'; 
+import { useStoreContext } from '../utils/GlobalState';
 import { QUERY_CATEGORIES } from '../utils/queries';
 
 function CategoryBubbles() {
+  const [state, dispatch] = useStoreContext();
+
+  const { categories } = state;
+
   const { loading, error, data } = useQuery(QUERY_CATEGORIES);
+
+  useEffect(() => {
+    if (data) {
+      dispatch({
+        type: UPDATE_CATEGORIES,
+        categories: data.categories,
+      });
+    }
+  }, [data, dispatch]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-
-  const categories = data.categories;
 
   return (
     <div>
