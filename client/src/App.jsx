@@ -9,8 +9,8 @@ import { setContext } from "@apollo/client/link/context";
 import { Outlet } from "react-router-dom";
 import Marquee from "./components/Marquee"
 
-import { Button } from "flowbite-react";
 import Header from "./components/Header";
+import Nav from "./components/Nav";
 
 const httpLink = createHttpLink({
     uri: "/graphql",
@@ -35,7 +35,6 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <>
-                <Button />
                 <Header />
                 <Outlet />
             </>
