@@ -16,6 +16,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         products: [...action.products]
-      }
+      };
+    case UPDATE_CATEGORIES:
+      return {
+        ...state,
+        categories: [...action.categories],
+      };
   }
 }
