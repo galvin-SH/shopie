@@ -17,10 +17,10 @@ export const QUERY_PRODUCTS = gql`
             _id
             productName
             productDescription
+            productPrice
             productCategory {
                 categoryName
             }
-            productPrice
             onSale
             saleFactor
             salePrice
