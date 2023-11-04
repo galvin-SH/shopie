@@ -14,7 +14,6 @@ const HomePage = () => {
 
     useEffect(() => {
         if(!loading) {
-            console.log(data);
             dispatch({
                 type: "UPDATE_PRODUCTS",
                 value: data.getAllProducts,
