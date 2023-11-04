@@ -12,4 +12,4 @@ function Marquee() {
   );
 }
 
-export default Marquee
+export default Marquee;

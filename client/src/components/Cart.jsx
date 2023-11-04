@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Button, Modal } from 'flowbite-react';
+import { XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
+import {  Modal } from 'flowbite-react';
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -32,7 +33,9 @@ export default function Cart() {
 
     return (
         <>
-        <Button onClick={() => setOpenModal(true)}>CART</Button>
+        <Link as={Link} to="#" onClick={() => setOpenModal(true)}>
+        <ShoppingBagIcon className="h-6 w-6 cursor-pointer text-gray hover:scale-110 ease-in duration-300" />
+            </Link>
         <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Body>
             <div className='inset-0'>
