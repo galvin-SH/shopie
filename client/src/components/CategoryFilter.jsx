@@ -9,7 +9,9 @@ const style = {
   borderWidth: "5px",
   float: "left",
   width: "400px",
-  height: "650px"
+  height: "650px",
+  marginLeft: ".5em",
+  marginTop: "1em",
 };
 
 // Still needs work done. Will come back to it
