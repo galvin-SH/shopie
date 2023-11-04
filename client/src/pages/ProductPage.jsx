@@ -1,13 +1,17 @@
+import CategoryBubbles from "../components/CategoryBubbles";
+import CategoryFilter from "../components/CategoryFilter";
+
 // import './app.css';
+
 const ProductPage = () => {
     return (
-        <section className="sortingTab">
 
+        <div  >
+            <CategoryBubbles />
 
-            <div className="content-box">
-                {/* Content goes here */}
+            <div className="content-box absolute float-right"> 
             </div>
-        </section>
+        </div>
     );
 };
 export default ProductPage;

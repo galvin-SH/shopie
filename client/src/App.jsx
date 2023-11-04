@@ -10,7 +10,7 @@ import { Outlet } from "react-router-dom";
 import Marquee from "./components/Marquee"
 
 import Header from "./components/Header";
-import Nav from "./components/Nav";
+import CategoryBubbles from "./components/CategoryBubbles";
 
 const httpLink = createHttpLink({
     uri: "/graphql",
@@ -37,6 +37,7 @@ function App() {
             <>
                 <Header />
                 <Outlet />
+
             </>
         </ApolloProvider>
     );
