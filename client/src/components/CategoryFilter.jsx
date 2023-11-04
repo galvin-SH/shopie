@@ -1,67 +1,111 @@
-import React from 'react';
-import { useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { QUERY_CATEGORIES } from '../utils/queries';
-import { useStoreContext } from '../utils/GlobalState';
+  import React from 'react';
+  import { useState, useEffect } from 'react';
 
-const style = {
-  borderStyle: "solid",
-  borderWidth: "5px",
-  float: "left",
-  width: "400px",
-  height: "650px",
-  marginLeft: ".5em",
-  marginTop: "1em",
-};
 
-// Still needs work done. Will come back to it
 
-function CategoryFilter() {
-  //const { loading, error, data } = useQuery(QUERY_CATEGORIES);
-  //const [selectedCategories, setSelectedCategories] = useState([]);
+  function CategoryFilter() {
+    
+    const [checkboxes, setCheckboxes] = useState({
+      Candy: false,
+      Chips: false,
+      Chocolate: false,
+      Crackers: false,
+      Drinks: false,
+      Savory: false,
+    });
 
-  //const [state, dispatch] = useStoreContext();
+    const clickCheckbox = (category) => {
+      setCheckboxes({
+        ...checkboxes,
+        [category]: !checkboxes[category],
+      });
+    };
 
-  // const onClick = (category) => {
-  //   if (selectedCategories.includes(category)) {
-  //     const updatedCategories = setSelectedCategories.filter((category) => category !== DeselectCategory);
+    // useEffect(() => {
+    
+    //   // bring in data here
 
-  //     setSelectedCategories(updatedCategories);
+    //   const filteredData = data.filter((item) => checkboxes[item.category]);
 
-  //     dispatch({
-  //       type: "UPDATE_CATEGORIES",
-  //       categories: updatedCategories,
-  //     });
-  //   } else {
-  //     setSelectedCategories([...selectedCategories, category]);
+    //   console.log(filteredData);
+    // }, [checkboxes]);
+  
+  const style = {
+    borderStyle: "solid",
+    borderWidth: "5px",
+    float: "left",
+    width: "400px",
+    height: "fit-content",
+    marginLeft: ".5em",
+    marginTop: "1em",
+    padding: "2em"
+  };
 
-  //     dispatch({
-  //       type: "UPDATE_CATEGORIES",
-  //       categories: [...selectedCategories, category],
-  //     })
-
-  //   }
-  // }
-
-  //const categories = data.categories;
-
-  return (
-    <div style={style}>
-      <h2>Categories</h2>
-      <div>
-        {/* {categories.map((category) => (
-          <label key={category._id}>
-            <input
-              type="checkbox"
-              checked={selectedCategories.includes(category.name)}
-              onChange={() => handleCategoryClick(category.name)}
-            />
-            {category.name}
-          </label>
-        ))} */}
+    return (
+      <div style={style}>
+      <div className="filterContainer ">
+        <h1 className="titleSpace font-bold mt-1 ">
+          CATEGORIES
+        </h1>
+        <label className="mt-2">
+          Candy
+          <input 
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Candy}
+            onChange={() => clickCheckbox('Candy')}
+          />
+        </label>
+        <label>
+          Chips
+          <input
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Chips}
+            onChange={() => clickCheckbox('Chips')}
+          />
+        </label>
+        <label>
+          Chocolate
+          <input
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Chocolate}
+            onChange={() => clickCheckbox('Chocolate')}
+          />
+        </label>
+        <label>
+          Crackers
+          <input
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Crackers}
+            onChange={() => clickCheckbox('Crackers')}
+          />
+        </label>
+        <label>
+          Drinks
+          <input
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Drinks}
+            onChange={() => clickCheckbox('Drinks')}
+          />
+        </label>
+        <label>
+          Savory
+          <input
+            type="checkbox"
+            className="checkboxItem"
+            checked={checkboxes.Savory}
+            onChange={() => clickCheckbox('Savory')}
+          />
+        </label>
       </div>
-    </div>
-  )
-}
+      </div>
+    );
+  };
 
-export default CategoryFilter;
+    
+
+  export default CategoryFilter;

@@ -57,13 +57,12 @@
 .content-box {
     background-color: #f2f2f2;
     padding: 20px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
-    width: 70%;
+    width: 69%;
     height:fit-content;
-    margin-left: 23em;
+    margin-left: 31%;
     margin-top: 1em;
-    /* margin-right: 1em; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -111,5 +110,19 @@
   .bubble img {
     max-width: 100%;
      border-radius: 50%;
-     
+  }
+
+  .filterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkboxItem {
+    margin: 8px;
+  }
+
+  .titleSpace {
+    letter-spacing: .1em;
+    font-size: larger;
   }
