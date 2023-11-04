@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Modal, Tabs } from "flowbite-react";
 import LogoWhite from "../assets/images/HAPPY-SNACKS-white.gif"
 import Cart from "../components/Cart";
-import SignUpForm from './SignupForm';
-import LoginForm from './LoginForm';
-import Auth from '../utils/auth';
+import SignUpForm from "./SignupForm";
+import LoginForm from "./LoginForm";
+import Auth from "../utils/auth";
+import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
 
 
 
@@ -15,25 +16,29 @@ function Nav() {
 
 	return (
 		<>
-			<Navbar fluid rounded className="border-2 rounded-lg p-3 border-gray-300">
+			<Navbar fluid rounded className=" p-2 border-gray-300">
 				<Navbar.Brand as={Link} href="https://flowbite-react.com">
-					<img src={LogoWhite} className="mr-3 h-6 sm:h-9" alt="Happy Snack" />
-				</Navbar.Brand>
+            		<img src={LogoWhite} className="mr-3 h-6 sm:h-9" alt="Happy Snack" />
+        		</Navbar.Brand>
 				<Navbar.Toggle />
 				<Navbar.Collapse>
-					<Navbar.Link as={Link} to="#" active>Home</Navbar.Link>
-					<Navbar.Link as={Link} to="#">About</Navbar.Link>
-					<Navbar.Link as={Link} to="#">Menu</Navbar.Link>
+					<Navbar.Link as={Link} to="#">
+                		<HomeIcon className="h-6 w-6 cursor-pointer text-black hover:scale-110 ease-in duration-300" />
+            		</Navbar.Link>
+            		<Navbar.Link as={Link} to="#">
+                		<MoonIcon className="h-6 w-6 cursor-pointer text-black hover:scale-110 ease-in duration-300" />
+            		</Navbar.Link>
 					{Auth.loggedIn() ? (
 						<>
-							<Navbar.Link onClick={Auth.logout}>Logout</Navbar.Link>
+							<Navbar.Link onClick={Auth.logout}>
+                				<UserCircleIcon className="h-6 w-6 cursor-pointer  text-black hover:scale-110 ease-in duration-300" />
+            				</Navbar.Link>
+							<Cart />
 						</>
 					) : (
 						<Navbar.Link onClick={() => setShowModal(true)}>Login/Sign Up</Navbar.Link>
 
 					)}
-					<Navbar.Link as={Link} to="#">Dark Mode</Navbar.Link>
-					<Cart />
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
@@ -53,5 +58,4 @@ function Nav() {
 		</>
 	);
 }
-
 export default Nav;
