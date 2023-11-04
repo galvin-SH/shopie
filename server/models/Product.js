@@ -59,7 +59,7 @@ productSchema.virtual("salePrice").get(function () {
 });
 
 productSchema.virtual("imagePath").get(function () {
-    return `src/assets/images/${this.imageSrc}`;
+    return `./src/assets/images/${this.imageSrc}`;
 });
 
 const Product = model("Product", productSchema);
