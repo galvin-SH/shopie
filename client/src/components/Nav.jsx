@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "flowbite-react";
 import LogoWhite from "../assets/images/HAPPY-SNACKS-white.gif"
 import Cart from "../components/Cart";
-import { UserCircleIcon, MoonIcon, HomeIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { UserCircleIcon, MoonIcon, HomeIcon } from '@heroicons/react/24/outline'
 
 function Nav() {
   return (
