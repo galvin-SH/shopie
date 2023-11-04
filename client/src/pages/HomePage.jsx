@@ -5,7 +5,6 @@ import ProductPage from "../pages/ProductPage";
 const HomePage = () => {
     return (
         <div>
-            
             <Marquee />
             <ProductPage />
             {/* <CategoryFilter /> */}
