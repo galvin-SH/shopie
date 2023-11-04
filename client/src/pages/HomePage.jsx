@@ -9,6 +9,7 @@ const HomePage = () => {
             <Marquee />
             <ProductPage />
             
+            <CategoryFilter />
         </div>
        
     );
