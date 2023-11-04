@@ -12,12 +12,15 @@ const HomePage = () => {
     const [state, dispatch] = useGlobalState();
     const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-    if(!loading) {
-        // dispatch({
-        //     type: "UPDATE_PRODUCTS",
-        //     value: data.getAllProducts,
-        // });
-    }
+    useEffect(() => {
+        if(!loading) {
+            console.log(data);
+            dispatch({
+                type: "UPDATE_PRODUCTS",
+                value: data.getAllProducts,
+            });
+        }
+    }, [loading]);
 
     return (
         <div>
