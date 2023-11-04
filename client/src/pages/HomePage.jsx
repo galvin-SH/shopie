@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { useGlobalState } from "../utils/GlobalState";
-import { useLazyQuery } from "@apollo/client"
+import { useQuery} from "@apollo/client"
 import { QUERY_PRODUCTS } from "../utils/queries";
 
 import Marquee from "../components/Marquee"
@@ -9,18 +10,16 @@ import ProductSection from "../components/ProductSection";
 
 const HomePage = () => {
     const [state, dispatch] = useGlobalState();
-    const [getData, { data }] = useLazyQuery(QUERY_PRODUCTS);
+    const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-    // async function runGetData() {
-    //     await getData();
-    //     console.log(data);
-    // }
-
-    //runGetData();
-    // dispatch({
-    //     type: "UPDATE_PRODUCTS",
-    //     value: data.getAllProducts,
-    // });
+    useEffect(() => {
+        if(!loading) {
+            dispatch({
+                type: "UPDATE_PRODUCTS",
+                value: data.getAllProducts,
+            });
+        }
+    }, [loading]);
 
     return (
         <div>
