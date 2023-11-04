@@ -8,8 +8,7 @@ const HomePage = () => {
             
             <Marquee />
             <ProductPage />
-            
-            <CategoryFilter />
+            {/* <CategoryFilter /> */}
         </div>
        
     );

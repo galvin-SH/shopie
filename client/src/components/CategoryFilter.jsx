@@ -1,15 +1,7 @@
   import React from 'react';
   import { useState, useEffect } from 'react';
 
-  const style = {
-    borderStyle: "solid",
-    borderWidth: "5px",
-    float: "left",
-    width: "400px",
-    height: "650px",
-    marginLeft: ".5em",
-    marginTop: "1em",
-  };
+
 
   function CategoryFilter() {
     
@@ -29,20 +21,35 @@
       });
     };
 
-    useEffect(() => {
+    // useEffect(() => {
     
-      // bring in data here
+    //   // bring in data here
 
-      const filteredData = data.filter((item) => checkboxes[item.category]);
+    //   const filteredData = data.filter((item) => checkboxes[item.category]);
 
-      console.log(filteredData);
-    }, [checkboxes]);
-    
+    //   console.log(filteredData);
+    // }, [checkboxes]);
+  
+  const style = {
+    borderStyle: "solid",
+    borderWidth: "5px",
+    float: "left",
+    width: "400px",
+    height: "fit-content",
+    marginLeft: ".5em",
+    marginTop: "1em",
+    padding: "2em"
+  };
+
     return (
-      <div className="filterContainer">
-        <label>
+      <div style={style}>
+      <div className="filterContainer ">
+        <h1 className="font-bold mt-1 ">
+          CATEGORIES
+        </h1>
+        <label className="mt-2">
           Candy
-          <input
+          <input 
             type="checkbox"
             className="checkboxItem"
             checked={checkboxes.Candy}
@@ -94,6 +101,7 @@
             onChange={() => clickCheckbox('Savory')}
           />
         </label>
+      </div>
       </div>
     );
   };
