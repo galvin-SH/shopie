@@ -8,7 +8,6 @@ const ProductPage = () => {
 
         <div  >
             <CategoryBubbles />
-            <CategoryFilter />
 
             <div className="content-box absolute float-right"> 
             </div>
