@@ -30,12 +30,12 @@
     "description": "buy them!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/chips/koikeya-truffleandwagyu.png",
     "title": "delicious??",
     "description": "so good!"
     },
     {
-    "img": "/chips.png",
+    "img": "./src/assets/images/chocolate/kitkat-peach.png",
     "title": "buy here!!",
     "description": "snack stop!!"
     }

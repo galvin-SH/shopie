@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SHLogo from "../assets/images/SNACK-HAPPY.gif"
 import { Navbar, Modal, Tabs } from "flowbite-react";
-import LogoWhite from "../assets/images/HAPPY-SNACKS-white.gif"
 import Cart from "../components/Cart";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
@@ -12,13 +12,12 @@ import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
 
 function Nav() {
 	const [showModal, setShowModal] = useState(false);
-	console.log(Tabs);
 
 	return (
 		<>
-			<Navbar fluid rounded className=" p-2 border-gray-300">
+			<Navbar fluid rounded className=" p-1 border-gray-300">
 				<Navbar.Brand as={Link} href="https://flowbite-react.com">
-            		<img src={LogoWhite} className="mr-3 h-6 sm:h-9" alt="Happy Snack" />
+            		<img src={SHLogo} className="h-12 sm:h-12" alt="Happy Snack" />
         		</Navbar.Brand>
 				<Navbar.Toggle />
 				<Navbar.Collapse>
