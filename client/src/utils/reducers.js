@@ -5,7 +5,7 @@ export const reducer = (state, action) => {
 			console.log(action)
 			return {
 				...state,
-				products: [...state.products, action.payload]
+				products: [action.value]
 			};
 		default:
 			console.log("Defualt")
