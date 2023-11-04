@@ -44,7 +44,7 @@
     return (
       <div style={style}>
       <div className="filterContainer ">
-        <h1 className="font-bold mt-1 ">
+        <h1 className="titleSpace font-bold mt-1 ">
           CATEGORIES
         </h1>
         <label className="mt-2">

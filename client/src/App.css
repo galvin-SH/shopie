@@ -121,3 +121,8 @@
   .checkboxItem {
     margin: 8px;
   }
+
+  .titleSpace {
+    letter-spacing: .1em;
+    font-size: larger;
+  }
