@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { useGlobalState } from "../utils/GlobalState";
-import { useQuery} from "@apollo/client"
+import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../utils/queries";
 
 import Marquee from "../components/Marquee";
@@ -13,7 +13,7 @@ const HomePage = () => {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
 
     useEffect(() => {
-        if(!loading) {
+        if (!loading) {
             dispatch({
                 type: "SET_PRODUCTS",
                 payload: data.getAllProducts,
@@ -23,12 +23,13 @@ const HomePage = () => {
 
     return (
         <div>
-            <Marquee/>
-            <CategoryBubbles/>
-            <CategoryFilter/>
-            <ProductSection/>
+            <div className="marqueeBox">
+                <Marquee />
+            </div>
+            <CategoryBubbles />
+            <CategoryFilter />
+            <ProductSection />
         </div>
-       
     );
 };
 export default HomePage;
