@@ -10,9 +10,7 @@ export default function StoreProvider(props) {
   const initialState = {
     products: [],
     cart: [],
-    cartOpen: false,
-    categories: [],
-    currentCategory: "",
+    categories: ["Candy", "Chips", "Chocolate", "Crackers", "Drinks", "Savory"],
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);

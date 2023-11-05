@@ -1,12 +1,12 @@
 // import { Carousel } from "flowbite-react";
 // import { Link } from "react-router-dom";
-import Product from "./Product";
+import MarqueeProduct from "./MarqueeProduct";
 
 
 function Marquee() {
   return (
     <div className="marqueeBox" >
-      <Product />
+      <MarqueeProduct />
     </div>
 
   );

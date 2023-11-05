@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SHLogo from "../assets/images/SNACK-HAPPY.gif"
+import SHLogo from "../../assets/images/SNACK-HAPPY.gif"
 import { Navbar, Modal, Tabs } from "flowbite-react";
-import Cart from "../components/Cart";
+import Cart from "../Cart";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
-import Auth from "../utils/auth";
+import Auth from "../../utils/auth";
 import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
 
 
