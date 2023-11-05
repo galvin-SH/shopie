@@ -1,10 +1,10 @@
 import React from 'react';
-import Savory from "../../public/bubbles/Savory.png";
-import Chips from "../../public/bubbles/Chips.png";
-import Candy from "../../public/bubbles/Candy.png";
-import Chocolate from "../../public/bubbles/Chocolate.png";
-import Drinks from "../../public/bubbles/Drinks.png";
-import Crackers from "../../public/bubbles/Crackers.png";
+import Savory from "../assets/bubbles/Savory.png";
+import Chips from "../assets/bubbles/Chips.png";
+import Candy from "../assets/bubbles/Candy.png";
+import Chocolate from "../assets/bubbles/Chocolate.png";
+import Drinks from "../assets/bubbles/Drinks.png";
+import Crackers from "../assets/bubbles/Crackers.png";
 
 
 
