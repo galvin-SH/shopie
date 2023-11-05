@@ -32,13 +32,12 @@
   
   const style = {
     borderStyle: "solid",
-    borderWidth: "5px",
-    width: "400px",
-    height: "fit-content",
+    borderWidth: ".4em",
+    width: "15em",
   };
 
     return (
-      <div className="bg-white p-8" style={style}>
+      <div className="bg-white p-8 h-screen" style={style}>
       <div className="flex flex-col">
         <h1 className="titleSpace font-bold mt-1 ">
           CATEGORIES

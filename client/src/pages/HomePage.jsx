@@ -35,17 +35,17 @@ const HomePage = () => {
                     className="absolute inset-0"
                     style={{
                         backgroundImage: `url(${BG})`,
-                        backgroundRepeat: "repeat-x",
-                        backgroundSize: "auto",
+                        backgroundRepeat: "repeat",
+                        backgroundSize: "15em",
                     }}>
                 </div>
                 <img src={BG} alt="smiley faces" />
           
-                <div className="z-10 absolute top-0 display:inline-block grid grid-cols-7">
-                    <div className="col-start-2">
+                <div className="z-10 absolute top-0 display:inline-block grid grid-cols-10 m-10">
+                    <div className="col-start-1 ">
                     <CategoryFilter />
                     </div>
-                    <div className="col-start-4 col-span-2">
+                    <div className="col-start-3 ">
                     <ProductSection />
                     </div>
                 </div>
