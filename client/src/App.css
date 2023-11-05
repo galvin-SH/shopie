@@ -101,12 +101,6 @@
     border-radius: 50%;
 }
 
-.filterContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .checkboxItem {
   margin: 8px;
 }

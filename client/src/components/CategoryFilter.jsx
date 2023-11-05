@@ -39,7 +39,7 @@
 
     return (
       <div className="bg-white p-8" style={style}>
-      <div className="filterContainer ">
+      <div className="flex flex-col">
         <h1 className="titleSpace font-bold mt-1 ">
           CATEGORIES
         </h1>
