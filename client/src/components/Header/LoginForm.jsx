@@ -79,6 +79,7 @@ const LoginForm = () => {
         </Form.Group>
         <Button 
           disabled={!(userFormData.email && userFormData.password)} 
+          className="bg-#B4C6FC"
           type="submit"
           variant="success">
           Submit
