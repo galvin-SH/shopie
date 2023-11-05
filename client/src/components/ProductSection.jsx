@@ -4,7 +4,7 @@ const ProductPage = () => {
     return (
         <div  >
             
-            <div className="content-box absolute float-right"> 
+            <div className="content-box absolute bg-white p-5 "> 
             <Product />
             </div>
         </div>

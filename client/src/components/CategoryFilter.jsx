@@ -33,16 +33,12 @@
   const style = {
     borderStyle: "solid",
     borderWidth: "5px",
-    float: "left",
     width: "400px",
     height: "fit-content",
-    marginLeft: ".5em",
-    marginTop: "1em",
-    padding: "2em"
   };
 
     return (
-      <div style={style}>
+      <div className="bg-white p-8" style={style}>
       <div className="filterContainer ">
         <h1 className="titleSpace font-bold mt-1 ">
           CATEGORIES

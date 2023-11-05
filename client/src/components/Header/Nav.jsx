@@ -14,7 +14,7 @@ function Nav() {
 	const [showModal, setShowModal] = useState(false);
 
 	return (
-		<>
+		<>		
 			<Navbar fluid rounded className=" p-1 border-gray-300">
 				<Navbar.Brand as={Link} href="https://flowbite-react.com">
             		<img src={SHLogo} className="h-12 sm:h-12" alt="Happy Snack" />
