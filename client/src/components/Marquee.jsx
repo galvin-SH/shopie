@@ -1,4 +1,8 @@
-const Marquee = ({ products }) => {
+import { useGlobalState } from "../utils/GlobalState";
+
+const Marquee = () => {
+    const [state, dispatch] = useGlobalState();
+    const products = state.products;
     if (!products.length) {
         return <h3>No products yet....</h3>;
     }
