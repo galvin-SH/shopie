@@ -31,13 +31,13 @@
     // }, [checkboxes]);
   
   const style = {
-    borderStyle: "solid",
-    borderWidth: ".4em",
-    width: "15em",
+    // borderStyle: "solid",
+    // borderWidth: ".4em",
+    // width: "15em",
   };
 
     return (
-      <div className="bg-white p-8 h-screen" style={style}>
+      <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
       <div className="flex flex-col">
         <h1 className="titleSpace font-bold mt-1 ">
           CATEGORIES

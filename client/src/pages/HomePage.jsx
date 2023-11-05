@@ -42,10 +42,10 @@ const HomePage = () => {
                 <img src={BG} alt="smiley faces" />
           
                 <div className="z-10 absolute top-0 display:inline-block grid grid-cols-10 m-10">
-                    <div className="col-start-1 ">
+                    <div className="col-start-1">
                     <CategoryFilter />
                     </div>
-                    <div className="col-start-3 ">
+                    <div className="col-start-3">
                     <ProductSection />
                     </div>
                 </div>
