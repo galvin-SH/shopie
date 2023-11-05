@@ -1,14 +1,11 @@
 export const reducer = (state, action) => {
 	switch (action.type) {
-		case "UPDATE_PRODUCTS":
-			console.log("Reducer: ")
-			console.log(action)
+		case "SET_PRODUCTS":
 			return {
 				...state,
-				products: [action.value]
+				products: [...action.payload]
 			};
 		default:
-			console.log("Defualt")
 			return state;
 	}
 }

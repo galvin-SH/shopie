@@ -15,8 +15,8 @@ const HomePage = () => {
     useEffect(() => {
         if(!loading) {
             dispatch({
-                type: "UPDATE_PRODUCTS",
-                value: data.getAllProducts,
+                type: "SET_PRODUCTS",
+                payload: data.getAllProducts,
             });
         }
     }, [loading]);
