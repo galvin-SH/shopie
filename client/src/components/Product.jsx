@@ -15,7 +15,7 @@ const Product = (product) => {
     return (
         <div>
             {state.products.length != 0 ? (
-                <div className="border-1 rounded-lg shadow-gray-400 shadow-xl flex-col cursor-pointer m-10">
+                <div className="border-1 rounded-lg shadow-gray-400 shadow-xl flex-col cursor-pointer m-10 hover:scale-110 ease-in duration-300">
                     <img className="rounded-t-lg" src={imagePath} />
                     <ul >
                         <li >
