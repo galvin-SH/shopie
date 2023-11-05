@@ -1,8 +1,8 @@
-
 import Card from './Card';
 import data from './data.json';
 
-function Product() {
+
+function MarqueeProduct() {
   return (
     <article className="w-full inline-flex flex-nowrap overflow-hidden"
     x-data="{}"
@@ -37,4 +37,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default MarqueeProduct;
