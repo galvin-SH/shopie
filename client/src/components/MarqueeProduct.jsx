@@ -2,7 +2,6 @@
 import Card from './Card';
 import data from './data.json';
 
-
 function Product() {
   return (
     <article className="w-full inline-flex flex-nowrap overflow-hidden"
