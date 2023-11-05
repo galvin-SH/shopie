@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SHLogo from "../assets/images/SNACK-HAPPY.gif"
+import SHLogo from "../../assets/images/SNACK-HAPPY.gif"
 import { Navbar, Modal, Tabs } from "flowbite-react";
 import Cart from "../Cart";
 import SignUpForm from "./SignupForm";

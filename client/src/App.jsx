@@ -8,7 +8,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { Outlet } from "react-router-dom";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import GlobalState from "./utils/GlobalState";
 
 const httpLink = createHttpLink({
