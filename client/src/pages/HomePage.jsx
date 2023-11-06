@@ -7,6 +7,7 @@ import Marquee from "../components/Marquee";
 import CategoryBubbles from "../components/CategoryBubbles";
 import CategoryFilter from "../components/CategoryFilter";
 import ProductSection from "../components/ProductSection";
+import Banner from "../components/Banner";
 
 import BG from "../assets/images/SMILEY-BG.png"
 
@@ -25,9 +26,11 @@ const HomePage = () => {
 
     return (
         <div>
+            <Banner />
             <div className="marqueeBox">
                 <Marquee />
             </div>
+            <Banner />
             <CategoryBubbles />
 
             <div className="relative">
