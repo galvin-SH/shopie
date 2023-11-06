@@ -44,6 +44,7 @@ function Nav() {
 				<LoginForm setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/>
 			</Modal>
 			<Modal dismissible show={showSignUpModal} onClose={() => setShowModal(false)}>
+				
 			</Modal>
 		</>
 	);
