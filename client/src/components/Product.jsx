@@ -22,7 +22,7 @@ const Product = (product) => {
             payload: { ...product }
           });
         }
-      }
+    }
 
     return (
         <div>
