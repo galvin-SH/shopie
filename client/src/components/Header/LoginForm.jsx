@@ -34,7 +34,6 @@ const LoginForm = (props) => {
             Auth.login(token);
         } catch (err) {
             console.error(err);
-            setShowAlert(true);
         }
 
         setUserFormData({
