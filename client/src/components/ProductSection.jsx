@@ -6,9 +6,9 @@ const ProductPage = () => {
     console.log(state);
 
     return (
-        <div  >   
-            <div className="content-box absolute float-right">
-                {state.products.map((product) => (
+        <div className="content-box shadow-xl absolute bg-white p-5 h-screen overflow-scroll rounded-xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {state.products.map((product) => (
                 <Product
                     key={product._id}
                     _id={product._id}
@@ -17,7 +17,7 @@ const ProductPage = () => {
                     productPrice={product.productPrice}
                     categoryName={product.productCategory.categoryName}
                 />
-            ))} 
+            ))}
             </div>
         </div>
     );

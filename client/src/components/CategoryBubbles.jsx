@@ -12,7 +12,7 @@ function CategoryBubbles() {
   return (
     <div className="bubble-container">
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Candy} alt="Candy"
             className="w-14" />
         </div>
@@ -21,7 +21,7 @@ function CategoryBubbles() {
         </p>
       </a>
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Chips} alt="Chips" className="w-14" />
         </div>
         <p>
@@ -29,7 +29,7 @@ function CategoryBubbles() {
         </p>
       </a>
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Chocolate} alt="Chocolate" className="w-14" />
         </div>
         <p>
@@ -37,7 +37,7 @@ function CategoryBubbles() {
         </p>
       </a>
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Crackers} alt="Crackers" className="w-14" />
         </div>
         <p>
@@ -45,7 +45,7 @@ function CategoryBubbles() {
         </p>
       </a>
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Drinks} alt="Drinks" className="w-14" />
         </div>
         <p>
@@ -53,7 +53,7 @@ function CategoryBubbles() {
         </p>
       </a>
       <a href="#" target="_blank">
-        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer shadow-xl">
           <img src={Savory} alt="Savory" className="w-14" />
         </div>
         <p>
