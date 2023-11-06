@@ -1,11 +1,14 @@
 import { useGlobalState } from "../utils/GlobalState";
 import Product from "../components/Product";
+import Sorter from "./Sorter";
 
 const ProductPage = () => {
     const [state, dispatch] = useGlobalState();
 
     return (
-        <div className="content-box shadow-xl absolute bg-white p-5 h-screen overflow-scroll rounded-xl">
+        <div className="absolute">
+        <Sorter />
+        <div className="content-box shadow-xl bg-white p-5 h-screen overflow-scroll rounded-b-xl">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {state.products.map((product) => (
                 <Product
@@ -13,13 +16,16 @@ const ProductPage = () => {
                     _id={product._id}
                     imagePath={product.imagePath}
                     productName={product.productName}
-                    productPrice={product.productPrice}
-                    categoryName={product.productCategory.categoryName}
+                    salePrice={product.salePrice}
+                    productBrand={product.productBrand}
                     quantity={product.quantity}
                 />
             ))}
             </div>
         </div>
+
+
+</div>
     );
 };
 export default ProductPage;
