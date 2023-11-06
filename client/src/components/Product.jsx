@@ -59,7 +59,7 @@ const Product = (product) => {
             }
             <Link as={Link} to="#" onClick={() => setOpenModal(true)}>
             </Link>
-            <Modal show={openModal} onClose={() => setOpenModal(false)}>
+            <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
                 <Modal.Body>
                     <div className='inset-0'>
                         <div className="ml-3 flex h-5 items-center">
