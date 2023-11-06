@@ -44,7 +44,7 @@ const Product = (product) => {
                     </ul>
                     <ul className="flex justify-between m-2 p-2">
                         <li>
-                            $ {salePrice}
+                            $ {salePrice.toFixed(2)}
                         </li>
                         <button type="button" className="text-black #D1D5DB focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm  text-center inline-flex items-center ">
                             <ShoppingBagIcon className=" w-4 cursor-pointer text-gray hover:scale-150 ease-in duration-300" />
@@ -89,7 +89,7 @@ const Product = (product) => {
                                                         </li>
                                                         <li className="p-1 flex align-center" >
                                                             <p className="text-xl">
-                                                                ${productPrice}
+                                                                ${salePrice.toFixed(2)}
                                                             </p>
                                                             <p className="ml-4 text-lg">
                                                                 In Stock: {quantity}
