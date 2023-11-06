@@ -27,13 +27,13 @@ const HomePage = () => {
 
     // TODO - remove console logs, this is only here right now as an example of how to use the sort and filter functions
     // make sure to import the functions from ../utils/sortProducts
-    if (state.products.length) {
-        console.log(filterByCategory(state.products, "drinks"));
-        console.log(sortProducts("asc", "price", state.products));
-        console.log(sortProducts("desc", "price", state.products));
-        console.log(sortProducts("asc", "name", state.products));
-        console.log(sortProducts("desc", "name", state.products));
-    }
+    // if (state.products.length) {
+    //     console.log(filterByCategory(state.products, "drinks"));
+    //     console.log(sortProducts("asc", "price", state.products));
+    //     console.log(sortProducts("desc", "price", state.products));
+    //     console.log(sortProducts("asc", "name", state.products));
+    //     console.log(sortProducts("desc", "name", state.products));
+    // }
 
     return (
         <div>
