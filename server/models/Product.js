@@ -7,7 +7,10 @@ const productSchema = new Schema(
             type: String,
             required: true,
             trim: true,
-            unique: true,
+        },
+        productBrand: {
+            type: String,
+            trim: true,
         },
         // This is the description of the product
         productDescription: {
