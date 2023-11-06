@@ -6,17 +6,21 @@ const filterByCategory = (productsArray, categoryName) => {
 };
 
 // the exported function will sort the filtered array of products based on sortDirection and sortBy passed in as arguments
-module.exports = (sortDirection, sortBy, productsArray, categoryName) => {
+sortProducts = (sortDirection, sortBy, productsArray) => {
     try {
-        const filteredArray = filterByCategory(productsArray, categoryName);
-        if (sortDirection === "asc") {
-            // if sortDirection is "asc" then sort the filtered array in ascending order
-            return filteredArray.toSorted((a, b) => a.sortBy - b.sortBy);
-        } else if (sortDirection === "desc") {
-            // if sortDirection is "desc" then sort the filtered array in descending order
-            return filteredArray
-                .toSorted((a, b) => a.sortBy - b.sortBy)
-                .reverse();
+        switch (sortBy) {
+            case "price":
+                return sortDirection === "asc"
+                    ? productsArray.toSorted((a, b) => a.price - b.price)
+                    : productsArray
+                          .toSorted((a, b) => a.price - b.price)
+                          .reverse();
+            case "name":
+                return sortDirection === "asc"
+                    ? productsArray.toSorted((a, b) => a.name - b.name)
+                    : productsArray
+                          .toSorted((a, b) => a.name - b.name)
+                          .reverse();
         }
     } catch (err) {
         console.error(err);
