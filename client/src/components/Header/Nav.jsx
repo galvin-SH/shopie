@@ -7,6 +7,7 @@ import SignUpForm from "./SignupForm";
 import LoginForm2 from "./LoginForm";
 import Auth from "../../utils/auth";
 import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
+import SignupForm from "./SignupForm";
 
 
 
@@ -42,7 +43,8 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showLoginModal} onClose={() => setShowModal(false)}>
-				<LoginForm2 setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/>
+				{/* <LoginForm2 setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/> */}
+				<SignupForm />
 			</Modal>
 			<Modal dismissible show={showSignUpModal} onClose={() => setShowModal(false)}>
 				
