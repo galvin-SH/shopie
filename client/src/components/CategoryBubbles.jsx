@@ -19,23 +19,26 @@ const CategoryBubbles = () => {
   
 
 	return (
-		<div className="bubble-container">
+		<div className="bubble-container p-2 ">
 			{/* <a href="#" target="_blank"> */}
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer" >
-          <button onClick={() => setSortCategory("Candy")}>
-					<img src={Candy} alt="Candy" className="w-14" />
+				<div className="hover:scale-110 ease-in duration-300 cursor-pointer bubble">
+          <button  onClick={() => setSortCategory("Candy")}>
+          <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+					<img src={Candy} alt="Candy" className=" w-14" />
+          </div>
           <p>
 					CANDY
-				</p>
+				  </p>
           </button>
 				</div>
-        
-			
+    
 			{/* </a> */}
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Chips")}>
-					<img src={Chips} alt="Chips" className="w-14" />
+        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+					<img src={Chips} alt="Chips" className=" w-14" />
+          </div>
           <p>
 					CHIPS
 				</p>
@@ -46,19 +49,24 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Chocolate")}>
+        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Chocolate} alt="Chocolate" className="w-14" />
+          </div>
           <p>
 					CHOCOLATE
 				</p>
           </button>
+
 				</div>
 				
 			{/* </a> */}
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Crackers")}>
+        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Crackers} alt="Crackers" className="w-14" />
-          <p>
+          </div>
+          <p >
 					CRACKERS
 				</p>
           </button>
@@ -68,7 +76,9 @@ const CategoryBubbles = () => {
 			<a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Drinks")}>
+        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Drinks} alt="Drinks" className="w-14" />
+          </div>
           <p>
 					DRINKS
 				</p>
@@ -79,7 +89,9 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Savory")}>
+        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Savory} alt="Savory" className="w-14" />
+          </div>
           <p>
 					SAVORY
 				</p>
