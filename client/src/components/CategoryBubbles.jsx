@@ -16,20 +16,27 @@ const CategoryBubbles = () => {
 			payload: category
 		});
 	}	
+  
 
 	return (
 		<div className="bubble-container">
-			<a href="#" target="_blank">
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+			{/* <a href="#" target="_blank"> */}
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer" >
+          <button onClick={() => setSortCategory("Candy")}>
 					<img src={Candy} alt="Candy" className="w-14" />
-				</div>
-				<p>
+          <p>
 					CANDY
 				</p>
-			</a>
+          </button>
+				</div>
+        
+			
+			{/* </a> */}
 			<a href="#" target="_blank">
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button>
 					<img src={Chips} alt="Chips" className="w-14" />
+          </button>
 				</div>
 				<p>
 					CHIPS
@@ -37,7 +44,9 @@ const CategoryBubbles = () => {
 			</a>
 			<a href="#" target="_blank">
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button>
 					<img src={Chocolate} alt="Chocolate" className="w-14" />
+          </button>
 				</div>
 				<p>
 					CHOCOLATE
@@ -45,7 +54,9 @@ const CategoryBubbles = () => {
 			</a>
 			<a href="#" target="_blank">
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button>
 					<img src={Crackers} alt="Crackers" className="w-14" />
+          </button>
 				</div>
 				<p>
 					CRACKERS
@@ -53,7 +64,9 @@ const CategoryBubbles = () => {
 			</a>
 			<a href="#" target="_blank">
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button>
 					<img src={Drinks} alt="Drinks" className="w-14" />
+          </button>
 				</div>
 				<p>
 					DRINKS
@@ -61,7 +74,9 @@ const CategoryBubbles = () => {
 			</a>
 			<a href="#" target="_blank">
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button>
 					<img src={Savory} alt="Savory" className="w-14" />
+          </button>
 				</div>
 				<p>
 					SAVORY
