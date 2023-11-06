@@ -1,14 +1,8 @@
 import Nav from './Nav';
 
-const styles = {
-    header: {
-
-    }
-};
-
 const Header = () => {
     return (
-        <header style={ styles.header }>
+        <header >
             <Nav />
         </header>
     );
