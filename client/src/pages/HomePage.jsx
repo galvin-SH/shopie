@@ -39,7 +39,7 @@ const HomePage = () => {
                         backgroundSize: "15em",
                     }}>
                 </div>
-                <img src={BG} alt="smiley faces" />
+                <img src={BG} alt="smiley faces" className=" bg-white/50"/>
           
                 <div className="z-10 absolute top-0 display:inline-block grid grid-cols-10 m-10">
                     <div className="col-start-1">
