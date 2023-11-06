@@ -12,6 +12,7 @@ const typeDefs = `
   type Product {
     _id: ID
     productName: String
+    productBrand: String
     productDescription: String
     productPrice: Float
     productCategory: Category

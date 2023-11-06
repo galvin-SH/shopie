@@ -1,5 +1,6 @@
 const db = require("../config/connection");
 const cleanDB = require("./cleanDB");
+const formatFilename = require("./formatFilename");
 const fs = require("fs");
 const { Category, Product, User } = require("../models");
 
@@ -27,8 +28,28 @@ async function seed() {
                 console.log(`added category ${folder}`);
                 fs.readdir(categoriesFolder + folder, (err, files) => {
                     files.forEach(async (file) => {
+                        let brand;
+                        let variety;
+                        if (file.includes("-")) {
+                            brand = formatFilename(file.split("-")[0]);
+                            brand =
+                                brand.charAt(0).toUpperCase() + brand.slice(1);
+                            variety = formatFilename(
+                                file.split("-")[1].split(".")[0]
+                            );
+                            variety =
+                                variety.charAt(0).toUpperCase() +
+                                variety.slice(1);
+                        } else {
+                            variety = formatFilename(file.split(".")[0]);
+                            variety =
+                                variety.charAt(0).toUpperCase() +
+                                variety.slice(1);
+                        }
+
                         await Product.create({
-                            productName: file.replace(/\.[^/.]+$/, ""),
+                            productName: variety,
+                            productBrand: brand ? brand : null,
                             productDescription: "Lorem ipsum dolor sit amet",
                             productPrice:
                                 Math.floor(Math.random() * 1000) / 100,
