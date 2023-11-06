@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SHLogo from "../../assets/images/SNACK-HAPPY.gif"
-import { Navbar, Modal, Tabs } from "flowbite-react";
+import { Navbar, Modal } from "flowbite-react";
 import Cart from "../Cart";
 import LoginForm from "./LoginForm";
 import Auth from "../../utils/auth";
@@ -41,10 +41,10 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showLoginModal} onClose={() => setShowLoginModal(false)}>
-				<LoginForm setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/>
+				<LoginForm setShowSignUpModal={setShowSignUpModal} />
 			</Modal>
 			<Modal dismissible show={showSignUpModal} onClose={() => setShowSignUpModal(false)}>
-				<SignupForm />
+				<SignupForm setShowLoginModal={setShowLoginModal} />
 			</Modal>
 		</>
 	);
