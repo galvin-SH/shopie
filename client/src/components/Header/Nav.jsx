@@ -41,18 +41,6 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
-				{/* <Modal.Header>
-				<Tabs.Group aria-label="Default tabs" style="default">
-						<Tabs.Item active title="Login">
-							<LoginForm/>
-						</Tabs.Item>
-						<Tabs.Item title="Signup">
-							<SignUpForm/>
-						</Tabs.Item>
-					</Tabs.Group>
-				</Modal.Header>
-				<Modal.Body>
-				</Modal.Body> */}
 				<LoginForm2 />
 			</Modal>
 		</>
