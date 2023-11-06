@@ -16,22 +16,22 @@ function Nav() {
 
 	return (
 		<>		
-			<Navbar fluid rounded className="p-1 border-gray-300">
+			<Navbar fluid rounded className="p-1 border-gray-300 ">
 				<Navbar.Brand as={Link} href="https://flowbite-react.com">
             		<img src={SHLogo} className="h-12 sm:h-12" alt="Happy Snack" />
         		</Navbar.Brand>
 				<Navbar.Toggle />
 				<Navbar.Collapse className="p-1 mx-10" >
 					<Navbar.Link as={Link} to="#">
-                		<HomeIcon className="h-7 w-7 mt-3 cursor-pointer  text-black hover:scale-110 ease-in duration-300" />
+                		<HomeIcon className="h-7 w-7 my-3 cursor-pointer text-black hover:scale-110 ease-in duration-300" />
             		</Navbar.Link>
             		<Navbar.Link as={Link} to="#">
-                		<MoonIcon className="h-7 w-7 mt-3 cursor-pointer  text-black hover:scale-110 ease-in duration-300" />
+                		<MoonIcon className="h-7 w-7 my-3 cursor-pointer text-black hover:scale-110 ease-in duration-300" />
             		</Navbar.Link>
 					{Auth.loggedIn() ? (
 						<>
 							<Navbar.Link onClick={Auth.logout}>
-                				<UserCircleIcon className="h-6 w-6 cursor-pointer  text-black hover:scale-110 ease-in duration-300" />
+                				<UserCircleIcon className="h-7 w-7 my-3 cursor-pointer  text-black hover:scale-110 ease-in duration-300" />
             				</Navbar.Link>
 							<Cart />
 						</>
