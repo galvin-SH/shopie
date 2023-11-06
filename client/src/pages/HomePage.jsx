@@ -8,6 +8,8 @@ import CategoryBubbles from "../components/CategoryBubbles";
 import CategoryFilter from "../components/CategoryFilter";
 import ProductSection from "../components/ProductSection";
 
+import BG from "../assets/images/SMILEY-BG.png"
+
 const HomePage = () => {
     const [state, dispatch] = useGlobalState();
     const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -27,9 +29,29 @@ const HomePage = () => {
                 <Marquee />
             </div>
             <CategoryBubbles />
-            <CategoryFilter />
-            <ProductSection />
+
+            <div className="relative">
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: `url(${BG})`,
+                        backgroundRepeat: "repeat",
+                        backgroundSize: "15em",
+                    }}>
+                </div>
+                <img src={BG} alt="smiley faces" className=" bg-white/50"/>
+          
+                <div className="z-10 absolute top-0 display:inline-block grid grid-cols-10 m-10">
+                    <div className="col-start-1">
+                    <CategoryFilter />
+                    </div>
+                    <div className="col-start-3">
+                    <ProductSection />
+                    </div>
+                </div>
+            </div>
         </div>
+
     );
 };
 export default HomePage;

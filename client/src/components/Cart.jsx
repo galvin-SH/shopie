@@ -45,7 +45,7 @@ export default function Cart() {
                     <div className="ml-3 flex h-7 items-center">
                     <button
                         type="button"
-                        className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
+                        className="relative m-2 p-2 text-gray-400 hover:text-gray-500"
                         onClick={() => setOpenModal(false)}>
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Close panel</span>

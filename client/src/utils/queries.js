@@ -1,14 +1,14 @@
 import { gql } from "@apollo/client";
 
 export const QUERY_GET_SINGLE_USER = gql`
-  query getSingleUser {
-    getSingleUser {
-      _id
-      username
-      email
-      password
+    query getSingleUser {
+        getSingleUser {
+            _id
+            username
+            email
+            password
+        }
     }
-  }
 `;
 
 export const QUERY_PRODUCTS = gql`
@@ -16,6 +16,7 @@ export const QUERY_PRODUCTS = gql`
         getAllProducts {
             _id
             productName
+            productBrand
             productDescription
             productPrice
             productCategory {
@@ -25,6 +26,8 @@ export const QUERY_PRODUCTS = gql`
             saleFactor
             salePrice
             imagePath
+            quantity
+            inStock
         }
     }
 `;

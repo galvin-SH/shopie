@@ -7,7 +7,10 @@ const productSchema = new Schema(
             type: String,
             required: true,
             trim: true,
-            unique: true,
+        },
+        productBrand: {
+            type: String,
+            trim: true,
         },
         // This is the description of the product
         productDescription: {
@@ -41,7 +44,18 @@ const productSchema = new Schema(
             type: String,
             required: true,
         },
+        // This is the quantity of the product in stock
+        quantity: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
     },
+    // These are the options for the schema
+    // The toJSON option will allow us to include virtual properties when we use the .toJSON() method
+    // The timestamps option will automatically create a createdAt and updatedAt field for us
+    // The virtuals option will allow us to include virtual properties when we use the .toObject() method
+    // The getters option will allow us to use getters to transform the data
     {
         toJSON: {},
         timestamps: false,
@@ -49,7 +63,7 @@ const productSchema = new Schema(
         getters: true,
     }
 );
-
+// This virtual will return the sale price of the product if it is on sale or the regular price if it is not
 productSchema.virtual("salePrice").get(function () {
     if (!this.onSale) {
         return this.productPrice;
@@ -57,9 +71,17 @@ productSchema.virtual("salePrice").get(function () {
         return this.productPrice * this.saleFactor;
     }
 });
-
+// This virtual will return the path to the image of the product
 productSchema.virtual("imagePath").get(function () {
     return `./src/assets/images/${this.productCategory.categoryName}/${this.imageSrc}`;
+});
+// This virtual will return a boolean to determine if the product is in stock or not
+productSchema.virtual("inStock").get(function () {
+    if (this.quantity > 0) {
+        return true;
+    } else {
+        return false;
+    }
 });
 
 const Product = model("Product", productSchema);

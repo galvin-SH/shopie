@@ -1,91 +1,81 @@
 import { useState } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
-
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-const LoginForm = () => {
-  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-  const [loginUser] = useMutation(LOGIN_USER);
+const LoginForm = (props) => {
+	const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+	const [loginUser] = useMutation(LOGIN_USER);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
-  };
+	const { setShowLoginModal, setShowSignUpModal } = props
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+	const handleInputChange = (event) => {
+		const { name, value } = event.target;
+		setUserFormData({ ...userFormData, [name]: value });
+	};
 
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+	const handleFormSubmit = async (event) => {
+		event.preventDefault();
 
-    try {
-      const { data } = await loginUser({ variables: { ...userFormData } });
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
 
-      if (!data) {
-        throw new Error("something went wrong!");
-      }
+		try {
+			const { data } = await loginUser({ variables: { ...userFormData } });
 
-      const { token } = await data.login;
-      Auth.login(token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
-    }
+			if (!data) {
+				throw new Error("something went wrong!");
+			}
 
-    setUserFormData({
-      username: "",
-      email: "",
-      password: "",
-    });
-  };
+			const { token } = await data.login;
+			Auth.login(token);
+		} catch (err) {
+			console.error(err);
+			setShowAlert(true);
+		}
 
-  return (
-    <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant="danger">
-          Something went wrong with your login credentials!
-        </Alert>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="email">Email</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Your email"
-            name="email"
-            onChange={handleInputChange}
-            value={userFormData.email}
-            required
-          />
-          <Form.Control.Feedback type="invalid">Email is required!</Form.Control.Feedback>
-        </Form.Group>
+		setUserFormData({
+			email: "",
+			password: ""
+		});
+	};
 
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Your password"
-            name="password"
-            onChange={handleInputChange}
-            value={userFormData.password}
-            required
-          />
-          <Form.Control.Feedback type="invalid">Password is required!</Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          disabled={!(userFormData.email && userFormData.password)}
-          type="submit"
-          variant="success">
-          Submit
-        </Button>
-      </Form>
-    </>
-  );
+	return (
+		<div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+			<h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+				Sign in to your account
+			</h1>
+			<form onSubmit={handleFormSubmit} className="space-y-4 md:space-y-6" action="#">
+				<div>
+					<label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+					<input onChange={handleInputChange} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@email.com" required="" />
+				</div>
+				<div>
+					<label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+					<input onChange={handleInputChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
+				</div>
+				<div className="flex items-center justify-between">
+					<div className="flex items-start">
+						<div className="flex items-center h-5">
+							<input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
+						</div>
+						<div className="ml-3 text-sm">
+							<label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
+						</div>
+					</div>
+					<a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
+				</div>
+				<button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
+				<p className="text-sm font-light text-gray-500 dark:text-gray-400">
+					Don’t have an account yet? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+				</p>
+			</form>
+		</div>
+	);
+
 };
 
 export default LoginForm;
