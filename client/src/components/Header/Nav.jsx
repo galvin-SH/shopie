@@ -37,7 +37,6 @@ function Nav() {
 					) : (
 						<button onClick={() => setShowModal(true)} type="button" class="py-1.5 px-4 mr-2 mb-2 mt-2  text-sm font-medium text-black focus:outline-none bg-white rounded-lg border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 hover:scale-110 ease-in duration-300 dark:hover:text-white dark:hover:bg-gray-700">Login/Sign Up</button>
 					
-
 					)}
 				</Navbar.Collapse>
 			</Navbar>
