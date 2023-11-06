@@ -11,7 +11,8 @@ import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
 
 
 function Nav() {
-	const [showModal, setShowModal] = useState(false);
+	const [showLoginModal, setShowLoginModal] = useState(false);
+	const [showSignUpModal, setShowSignUpModal] = useState(false);
 
 	return (
 		<>		
@@ -35,25 +36,16 @@ function Nav() {
 							<Cart />
 						</>
 					) : (
-						<Navbar.Link onClick={() => setShowModal(true)}>Login/Sign Up</Navbar.Link>
+						<Navbar.Link onClick={() => setShowLoginModal(true)}>Login/Sign Up</Navbar.Link>
 
 					)}
 				</Navbar.Collapse>
 			</Navbar>
-			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
-				{/* <Modal.Header>
-				<Tabs.Group aria-label="Default tabs" style="default">
-						<Tabs.Item active title="Login">
-							<LoginForm/>
-						</Tabs.Item>
-						<Tabs.Item title="Signup">
-							<SignUpForm/>
-						</Tabs.Item>
-					</Tabs.Group>
-				</Modal.Header>
-				<Modal.Body>
-				</Modal.Body> */}
-				<LoginForm2 />
+			<Modal dismissible show={showLoginModal} onClose={() => setShowModal(false)}>
+				<LoginForm2 setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/>
+			</Modal>
+			<Modal dismissible show={showSignUpModal} onClose={() => setShowModal(false)}>
+				
 			</Modal>
 		</>
 	);
