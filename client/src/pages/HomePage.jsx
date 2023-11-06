@@ -27,7 +27,10 @@ const HomePage = () => {
 
     if (state.products.length) {
         console.log(filterByCategory(state.products, "drinks"));
+        console.log(sortProducts("asc", "price", state.products));
+        console.log(sortProducts("desc", "price", state.products));
         console.log(sortProducts("asc", "name", state.products));
+        console.log(sortProducts("desc", "name", state.products));
     }
 
     return (
