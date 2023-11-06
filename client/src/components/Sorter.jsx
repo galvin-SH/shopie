@@ -6,9 +6,11 @@ const Sorter = () => {
 
     return (
         <div className="content-box shadow-xl bg-white p-5 rounded-t-xl flex border-b">
-            <p>Found { } Products</p>
+            <container className="flex items-baseline">
+            <p className="mr-5">Found { } Products</p >
+           
 
-            <button onClick={() => setDropDown(true)} type="button" className="py-1.5 px-4 mr-2 mb-2 mt-2  text-sm font-medium text-black focus:outline-none bg-white rounded-lg border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 hover:scale-110 ease-in duration-300 dark:hover:text-white dark:hover:bg-gray-700 flex space-between">Sort by <svg className="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <button onClick={() => setDropDown(true)} type="button" className="py-1.5 px-4  mb-2 mt-2  text-sm font-medium text-black focus:outline-none bg-white rounded-lg border-2 border-black hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 hover:scale-110 ease-in duration-300 dark:hover:text-white dark:hover:bg-gray-700 flex space-between">Sort by <svg className="w-2.5 h-2.5 ml-2 mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
             </svg>
             </button>
@@ -36,7 +38,7 @@ const Sorter = () => {
                     </li>
                 </ul>
             </div>
-
+            </container>
         </div>
     );
 };
