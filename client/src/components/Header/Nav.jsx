@@ -4,7 +4,7 @@ import SHLogo from "../../assets/images/SNACK-HAPPY.gif"
 import { Navbar, Modal, Tabs } from "flowbite-react";
 import Cart from "../Cart";
 import SignUpForm from "./SignupForm";
-import LoginForm from "./LoginForm";
+import LoginForm2 from "./LoginForm";
 import Auth from "../../utils/auth";
 import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
 
@@ -15,7 +15,7 @@ function Nav() {
 
 	return (
 		<>		
-			<Navbar fluid rounded className=" p-1 border-gray-300">
+			<Navbar fluid rounded className="p-1 border-gray-300">
 				<Navbar.Brand as={Link} href="https://flowbite-react.com">
             		<img src={SHLogo} className="h-12 sm:h-12" alt="Happy Snack" />
         		</Navbar.Brand>
@@ -41,7 +41,7 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showModal} onClose={() => setShowModal(false)}>
-				<Modal.Header>
+				{/* <Modal.Header>
 				<Tabs.Group aria-label="Default tabs" style="default">
 						<Tabs.Item active title="Login">
 							<LoginForm/>
@@ -52,7 +52,8 @@ function Nav() {
 					</Tabs.Group>
 				</Modal.Header>
 				<Modal.Body>
-				</Modal.Body>
+				</Modal.Body> */}
+				<LoginForm2 />
 			</Modal>
 		</>
 	);
