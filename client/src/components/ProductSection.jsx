@@ -15,6 +15,7 @@ const ProductPage = () => {
                     productName={product.productName}
                     productPrice={product.productPrice}
                     categoryName={product.productCategory.categoryName}
+                    quantity={product.quantity}
                 />
             ))}
             </div>
