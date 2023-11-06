@@ -30,12 +30,13 @@ async function seed() {
                         await Product.create({
                             productName: file.replace(/\.[^/.]+$/, ""),
                             productDescription: "Lorem ipsum dolor sit amet",
-                            productPrice: 
-                                 Math.floor(Math.random() * 1000) / 100, 
+                            productPrice:
+                                Math.floor(Math.random() * 1000) / 100,
                             productCategory: category._id,
                             onSale: Math.random() < 0.5,
                             saleFactor: Math.floor(Math.random() * 100) / 100,
                             imageSrc: file,
+                            quantity: Math.floor(Math.random() * 21),
                         });
                         console.log(`added product ${file}`);
                     });
