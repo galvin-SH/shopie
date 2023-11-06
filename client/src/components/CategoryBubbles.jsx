@@ -19,11 +19,11 @@ const CategoryBubbles = () => {
   
 
 	return (
-		<div className="bubble-container p-2 ">
+		<div className="bubble-container  ">
 			{/* <a href="#" target="_blank"> */}
 				<div className="hover:scale-110 ease-in duration-300 cursor-pointer bubble">
           <button  onClick={() => setSortCategory("Candy")}>
-          <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+          <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Candy} alt="Candy" className=" w-14" />
           </div>
           <p>
@@ -36,7 +36,7 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Chips")}>
-        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Chips} alt="Chips" className=" w-14" />
           </div>
           <p>
@@ -49,7 +49,7 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Chocolate")}>
-        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Chocolate} alt="Chocolate" className="w-14" />
           </div>
           <p>
@@ -63,7 +63,7 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Crackers")}>
-        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Crackers} alt="Crackers" className="w-14" />
           </div>
           <p >
@@ -74,9 +74,9 @@ const CategoryBubbles = () => {
 			
 			{/* </a>
 			<a href="#" target="_blank"> */}
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer ">
         <button onClick={() => setSortCategory("Drinks")}>
-        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Drinks} alt="Drinks" className="w-14" />
           </div>
           <p>
@@ -89,7 +89,7 @@ const CategoryBubbles = () => {
 			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
         <button onClick={() => setSortCategory("Savory")}>
-        <div className="bg-gray-300 rounded-full w-16 h-16 flex items-center justify-center">
+        <div className="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center">
 					<img src={Savory} alt="Savory" className="w-14" />
           </div>
           <p>
