@@ -34,7 +34,7 @@ export default function Cart() {
     return (
         <>
         <Link as={Link} to="#" onClick={() => setOpenModal(true)}>
-        <ShoppingBagIcon className="h-6 w-6 cursor-pointer text-gray hover:scale-110 ease-in duration-300" />
+        <ShoppingBagIcon className="h-7 w-7 my-3 cursor-pointer text-gray hover:scale-110 ease-in duration-300" />
             </Link>
         <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Body>
