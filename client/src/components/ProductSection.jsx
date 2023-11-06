@@ -17,7 +17,7 @@ const ProductPage = () => {
                     imagePath={product.imagePath}
                     productName={product.productName}
                     productPrice={product.productPrice}
-                    categoryName={product.productCategory.categoryName}
+                    productBrand={product.productBrand}
                     quantity={product.quantity}
                 />
             ))}
