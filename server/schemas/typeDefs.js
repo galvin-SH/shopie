@@ -1,7 +1,6 @@
 const typeDefs = `
   type User {
     _id: ID
-    username: String
     email: String
     password: String
   }
@@ -12,6 +11,7 @@ const typeDefs = `
   type Product {
     _id: ID
     productName: String
+    productBrand: String
     productDescription: String
     productPrice: Float
     productCategory: Category
@@ -40,7 +40,7 @@ const typeDefs = `
 
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): Auth
+    createUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     createCategory(categoryName: String!): Category
     updateCategory(categoryId: ID!, categoryName: String!): Category

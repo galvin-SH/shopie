@@ -1,20 +1,45 @@
-  import React from 'react';
-  // import { useState, useEffect } from 'react';
-  import { Checkbox, Table } from 'flowbite-react';
+import React from 'react';
+// import { useState, useEffect } from 'react';
+import { Checkbox, Table } from 'flowbite-react';
+import { useGlobalState } from "../utils/GlobalState";
 
-  function CategoryFilter() {
-    return (
-      <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
-        <Table className="text-center">
-          <Table.Head>
-           <Table.HeadCell className="titleSpace bg-gray-100">CATEGORY</Table.HeadCell>
-           </Table.Head>
-        </Table>
+
+
+function CategoryFilter() {
+  const [state, dispatch] = useGlobalState();
+  // const [isChecked, setIsChecked] = useGlobalState(false);
+
+  const setSortCategory = (category) => {
+    dispatch({
+      type: "SET_SORTCATEGORY",
+      payload: category
+    });
+  }
+
+  // const handleCheckboxClick  = (string) => {
+  //   if (isChecked) {
+  //     setIsChecked(false);
+  //     setSortCategory('');
+  //   } else {
+  //     setIsChecked(true);
+  //     setSortCategory(string)
+  //   }
+  // }
+
+  return (
+    <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
+      <Table className="text-center">
+        <Table.Head>
+          <Table.HeadCell className="titleSpace bg-gray-100">CATEGORY</Table.HeadCell>
+        </Table.Head>
+      </Table>
       <Table hoverable>
         <Table.Body className="divide-y">
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+             {/* <Checkbox onClick={handleCheckboxClick("Candy")} /> */}
+             <Checkbox value="Candy" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Candy
@@ -22,7 +47,8 @@
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+            <Checkbox value="Chips" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Chips
@@ -30,7 +56,8 @@
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+            <Checkbox value="Chocolate" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Chocolate
@@ -38,7 +65,8 @@
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+            <Checkbox value="Crackers" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Crackers
@@ -46,7 +74,8 @@
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+            <Checkbox value="Drinks" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Drinks
@@ -54,7 +83,8 @@
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
-              <Checkbox />
+            <Checkbox value="Savory" onChange={({target}) => 
+             {setSortCategory( target.checked ? target.value: "" )}}/>
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               Savory
@@ -62,93 +92,93 @@
           </Table.Row>
         </Table.Body>
       </Table>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
-  // function CategoryFilter() {
-    
-  //   const [checkboxes, setCheckboxes] = useState({
-  //     Candy: false,
-  //     Chips: false,
-  //     Chocolate: false,
-  //     Crackers: false,
-  //     Drinks: false,
-  //     Savory: false,
-  //   });
+// function CategoryFilter() {
 
-  //   const clickCheckbox = (category) => {
-  //     setCheckboxes({
-  //       ...checkboxes,
-  //       [category]: !checkboxes[category],
-  //     });
-  //   };
+//   const [checkboxes, setCheckboxes] = useState({
+//     Candy: false,
+//     Chips: false,
+//     Chocolate: false,
+//     Crackers: false,
+//     Drinks: false,
+//     Savory: false,
+//   });
 
-  //   return (
-  //     <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
-  //     <div className="flex flex-col">
-  //       <h1 className="titleSpace font-bold mt-1 ">
-  //         CATEGORIES
-  //       </h1>
-  //       <label className="mt-2">
-  //         Candy
-  //         <input 
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Candy}
-  //           onChange={() => clickCheckbox('Candy')}
-  //         />
-  //       </label>
-  //       <label>
-  //         Chips
-  //         <input
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Chips}
-  //           onChange={() => clickCheckbox('Chips')}
-  //         />
-  //       </label>
-  //       <label>
-  //         Chocolate
-  //         <input
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Chocolate}
-  //           onChange={() => clickCheckbox('Chocolate')}
-  //         />
-  //       </label>
-  //       <label>
-  //         Crackers
-  //         <input
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Crackers}
-  //           onChange={() => clickCheckbox('Crackers')}
-  //         />
-  //       </label>
-  //       <label>
-  //         Drinks
-  //         <input
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Drinks}
-  //           onChange={() => clickCheckbox('Drinks')}
-  //         />
-  //       </label>
-  //       <label>
-  //         Savory
-  //         <input
-  //           type="checkbox"
-  //           className="checkboxItem"
-  //           checked={checkboxes.Savory}
-  //           onChange={() => clickCheckbox('Savory')}
-  //         />
-  //       </label>
-  //     </div>
-  //     </div>
-  //   );
-  // };
+//   const clickCheckbox = (category) => {
+//     setCheckboxes({
+//       ...checkboxes,
+//       [category]: !checkboxes[category],
+//     });
+//   };
 
-    
+//   return (
+//     <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
+//     <div className="flex flex-col">
+//       <h1 className="titleSpace font-bold mt-1 ">
+//         CATEGORIES
+//       </h1>
+//       <label className="mt-2">
+//         Candy
+//         <input 
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Candy}
+//           onChange={() => clickCheckbox('Candy')}
+//         />
+//       </label>
+//       <label>
+//         Chips
+//         <input
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Chips}
+//           onChange={() => clickCheckbox('Chips')}
+//         />
+//       </label>
+//       <label>
+//         Chocolate
+//         <input
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Chocolate}
+//           onChange={() => clickCheckbox('Chocolate')}
+//         />
+//       </label>
+//       <label>
+//         Crackers
+//         <input
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Crackers}
+//           onChange={() => clickCheckbox('Crackers')}
+//         />
+//       </label>
+//       <label>
+//         Drinks
+//         <input
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Drinks}
+//           onChange={() => clickCheckbox('Drinks')}
+//         />
+//       </label>
+//       <label>
+//         Savory
+//         <input
+//           type="checkbox"
+//           className="checkboxItem"
+//           checked={checkboxes.Savory}
+//           onChange={() => clickCheckbox('Savory')}
+//         />
+//       </label>
+//     </div>
+//     </div>
+//   );
+// };
 
-  export default CategoryFilter;
+
+
+export default CategoryFilter;

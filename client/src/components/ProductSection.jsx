@@ -3,7 +3,6 @@ import Product from "../components/Product";
 
 const ProductPage = () => {
     const [state, dispatch] = useGlobalState();
-    console.log(state);
 
     return (
         <div className="content-box shadow-xl absolute bg-white p-5 h-screen overflow-scroll rounded-xl">
@@ -16,6 +15,7 @@ const ProductPage = () => {
                     productName={product.productName}
                     productPrice={product.productPrice}
                     categoryName={product.productCategory.categoryName}
+                    quantity={product.quantity}
                 />
             ))}
             </div>
