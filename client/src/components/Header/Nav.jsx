@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import SHLogo from "../../assets/images/SNACK-HAPPY.gif"
 import { Navbar, Modal, Tabs } from "flowbite-react";
 import Cart from "../Cart";
-import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 import Auth from "../../utils/auth";
 import { UserCircleIcon, MoonIcon, HomeIcon } from "@heroicons/react/24/outline"
@@ -42,11 +41,10 @@ function Nav() {
 				</Navbar.Collapse>
 			</Navbar>
 			<Modal dismissible show={showLoginModal} onClose={() => setShowLoginModal(false)}>
-				{/* <LoginForm2 setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/> */}
-				<SignupForm />
+				<LoginForm setShowSignUpModal={setShowSignUpModal} setShowLoginModal={setShowLoginModal}/>
 			</Modal>
-			<Modal dismissible show={showSignUpModal} onClose={() => setShowModal(false)}>
-
+			<Modal dismissible show={showSignUpModal} onClose={() => setShowSignUpModal(false)}>
+				<SignupForm />
 			</Modal>
 		</>
 	);
