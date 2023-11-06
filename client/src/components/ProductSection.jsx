@@ -16,7 +16,7 @@ const ProductPage = () => {
                     _id={product._id}
                     imagePath={product.imagePath}
                     productName={product.productName}
-                    productPrice={product.productPrice}
+                    salePrice={product.salePrice}
                     productBrand={product.productBrand}
                     quantity={product.quantity}
                 />
