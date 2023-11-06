@@ -32,56 +32,61 @@ const CategoryBubbles = () => {
         
 			
 			{/* </a> */}
-			<a href="#" target="_blank">
+			{/* <a href="#" target="_blank"> */}
 				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-        <button>
+        <button onClick={() => setSortCategory("Chips")}>
 					<img src={Chips} alt="Chips" className="w-14" />
-          </button>
-				</div>
-				<p>
+          <p>
 					CHIPS
 				</p>
-			</a>
-			<a href="#" target="_blank">
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-        <button>
-					<img src={Chocolate} alt="Chocolate" className="w-14" />
           </button>
 				</div>
-				<p>
+			
+			{/* </a> */}
+			{/* <a href="#" target="_blank"> */}
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button onClick={() => setSortCategory("Chocolate")}>
+					<img src={Chocolate} alt="Chocolate" className="w-14" />
+          <p>
 					CHOCOLATE
 				</p>
-			</a>
-			<a href="#" target="_blank">
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-        <button>
-					<img src={Crackers} alt="Crackers" className="w-14" />
           </button>
 				</div>
-				<p>
+				
+			{/* </a> */}
+			{/* <a href="#" target="_blank"> */}
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button onClick={() => setSortCategory("Crackers")}>
+					<img src={Crackers} alt="Crackers" className="w-14" />
+          <p>
 					CRACKERS
 				</p>
-			</a>
-			<a href="#" target="_blank">
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-        <button>
-					<img src={Drinks} alt="Drinks" className="w-14" />
           </button>
 				</div>
-				<p>
+			
+			{/* </a>
+			<a href="#" target="_blank"> */}
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button onClick={() => setSortCategory("Drinks")}>
+					<img src={Drinks} alt="Drinks" className="w-14" />
+          <p>
 					DRINKS
 				</p>
-			</a>
-			<a href="#" target="_blank">
-				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
-        <button>
-					<img src={Savory} alt="Savory" className="w-14" />
           </button>
 				</div>
-				<p>
+			
+			{/* </a> */}
+			{/* <a href="#" target="_blank"> */}
+				<div className="bubble hover:scale-110 ease-in duration-300 cursor-pointer">
+        <button onClick={() => setSortCategory("Savory")}>
+					<img src={Savory} alt="Savory" className="w-14" />
+          <p>
 					SAVORY
 				</p>
-			</a>
+          </button>
+				</div>
+				
+			{/* </a> */}
 		</div>
 	);
 }
