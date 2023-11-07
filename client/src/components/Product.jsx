@@ -42,14 +42,16 @@ const Product = (product) => {
                             {productName}
                         </li>
                     </ul>
-                    <ul className="flex justify-between m-2 p-2">
+                    <ul className="flex justify-between m-1 p-1">
                         <li>
                             $ {salePrice.toFixed(2)}
                         </li>
-                        <button onClick={addToCart} type="button" className="text-black #D1D5DB focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm  text-center inline-flex items-center ">
-                            <ShoppingBagIcon className=" w-4 cursor-pointer text-gray hover:scale-150 ease-in duration-300" />
-                            {/* <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" /> */}
+                        
+                        <button onClick={addToCart} type="button" className="text-black #D1D5DB  focus:outline-none font-medium rounded-lg text-sm text-center flex">
+                            Add to Bag
+                            <ShoppingBagIcon className="ml-1 w-4 cursor-pointer text-gray hover:scale-150 ease-in duration-300" />
                         </button>
+                      
 
                     </ul>
                 </div>
@@ -72,16 +74,16 @@ const Product = (product) => {
                                 <XMarkIcon className="h-6 w-6 float-left" aria-hidden="true" />
                             </button>
                         </div>
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-start justify-between ">
                             <img
                                 src={imagePath}
                                 className=" w-40 object-cover object-center" />
                             <div className="flow-root">
-                                <ul role="list" className="-my-6 divide-y divide-gray-200">
+                                <ul role="list" className="-my-5 divide-y divide-gray-200">
                                     <li key={product.id} className="flex py-6">
                                         <div className="ml-4 flex flex-1 flex-col">
                                             <div>
-                                                <div className="flex justify-around text-base font-medium text-gray-900">
+                                                <div className="flex justify-around text-base font-medium text-gray-900 mb-4">
                                                     <ul >
                                                         <li className="p-1 text-2xl" >
                                                             {productName}
@@ -109,8 +111,8 @@ const Product = (product) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="border-t border-gray-200 px-2 py-2 sm:px-2">
-                            <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                        <div className="border-t border-gray-200 sm:px-1">
+                            <div className="mt-5 flex justify-center text-center text-sm text-gray-500">
                                 <p>
                                     <button
                                         type="button"

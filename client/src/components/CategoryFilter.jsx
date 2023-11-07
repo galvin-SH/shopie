@@ -29,12 +29,12 @@ function CategoryFilter() {
   return (
     <div className="bg-white p-8 h-screen shadow-xl w-60 rounded-xl">
       <Table className="text-center">
-        <Table.Head>
+        <Table.Head >
           <Table.HeadCell className="titleSpace bg-gray-100">CATEGORY</Table.HeadCell>
         </Table.Head>
       </Table>
       <Table hoverable>
-        <Table.Body className="divide-y">
+        <Table.Body className="divide-y ">
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
              {/* <Checkbox onClick={handleCheckboxClick("Candy")} /> */}

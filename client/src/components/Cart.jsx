@@ -51,10 +51,10 @@ export default function Cart() {
             <ShoppingBagIcon onClick={() => setOpenModal(true)} className="h-7 w-7 my-3 cursor-pointer text-gray hover:scale-110 ease-in duration-300" />
             <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
                 <Modal.Body>
-                    <div className="inset-0">
+                    <div className='inset-0'>
 
                         <div className="flex items-start justify-between">
-                            <h4 className="text-lg font-medium text-gray-900">Shopping cart</h4>
+                            <h4 className="text-lg font-medium text-gray-900" >Your Items</h4>
                             <div className="ml-3 flex h-7 items-center">
                                 <button
                                     type="button"
@@ -107,6 +107,7 @@ export default function Cart() {
                             </div>
                             <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                             <div className="mt-6">
+
                                 <button onClick={submitCheckout} className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</button>
                             </div>
                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
