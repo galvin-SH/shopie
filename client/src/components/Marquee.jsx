@@ -5,8 +5,10 @@ const Marquee = () => {
     const products = state.products;
     if (!products.length) {
         return <h3>Loading....</h3>;
-    }
+     }
 
+    //  const onSaleProducts = products.filter(product => product.onSale);
+  
     return (
         <article
             className="w-full inline-flex flex-nowrap overflow-hidden"
@@ -16,6 +18,7 @@ const Marquee = () => {
         })">
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                 {products.map((product) => (
+                    //took out onSale.products
                     <li
                         className="marqueeItem"
                         key={product._id}>
