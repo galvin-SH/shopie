@@ -13,7 +13,6 @@ export default function Cart() {
     const [state, dispatch] = useGlobalState();
     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
     const [openModal, setOpenModal] = useState(false);
-    console.log(data);
 
     useEffect(() => {
         if (data) {

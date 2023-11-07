@@ -1,8 +1,8 @@
 import { useGlobalState } from "../utils/GlobalState";
-import { useState } from 'react'
+import { useState } from "react"
 import { Link } from "react-router-dom";
 import { Modal } from "flowbite-react";
-import { XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, ShoppingBagIcon } from "@heroicons/react/24/outline"
 const Product = (product) => {
     const [state, dispatch] = useGlobalState();
 
@@ -46,13 +46,10 @@ const Product = (product) => {
                         <li>
                             $ {salePrice.toFixed(2)}
                         </li>
-                        
                         <button onClick={addToCart} type="button" className="text-black #D1D5DB  focus:outline-none font-medium rounded-lg text-sm text-center flex">
                             Add to Bag
                             <ShoppingBagIcon className="ml-1 w-4 cursor-pointer text-gray hover:scale-150 ease-in duration-300" />
                         </button>
-                      
-
                     </ul>
                 </div>
             ) : (
@@ -63,7 +60,7 @@ const Product = (product) => {
             </Link>
             <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
                 <Modal.Body>
-                    <div className='inset-0'>
+                    <div className="inset-0">
                         <div className="ml-3 flex h-5 items-center">
                             <button
                                 type="button"
