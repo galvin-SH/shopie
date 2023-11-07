@@ -44,10 +44,11 @@ const typeDefs = `
 
   input ProductInput {
     _id: ID
-    purchaseQuantity: Int
     productName: String
     salePrice: Float
     quantity: Int
+    imagePath: String
+    productBrand: String
   }
 
   type Query {

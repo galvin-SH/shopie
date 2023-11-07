@@ -1,11 +1,27 @@
 import { useGlobalState } from "../utils/GlobalState";
-import { useState } from 'react'
-import { XMarkIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
-import { Modal } from 'flowbite-react';
+import { useState } from "react"
+import { useEffect } from "react";
+import { XMarkIcon, ShoppingBagIcon } from "@heroicons/react/24/outline"
+import { Modal } from "flowbite-react";
+import { loadStripe } from "@stripe/stripe-js";
+import { useLazyQuery } from "@apollo/client";
+import { QUERY_CHECKOUT } from "../utils/queries";
+
+const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function Cart() {
     const [state, dispatch] = useGlobalState();
+    const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
     const [openModal, setOpenModal] = useState(false);
+    console.log(data);
+
+    useEffect(() => {
+        if (data) {
+            stripePromise.then((res) => {
+                res.redirectToCheckout({ sessionId: data.checkout.session });
+            });
+        }
+    }, [data]);
 
     const getTotal = () => {
         let total = 0
@@ -21,6 +37,14 @@ export default function Cart() {
             payload: product._id
         });
     };
+
+    function submitCheckout() {
+        getCheckout({
+            variables: {
+                products: [...state.cart],
+            },
+        });
+    }
 
     return (
         <>
@@ -83,12 +107,8 @@ export default function Cart() {
                             </div>
                             <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                             <div className="mt-6">
-                                <a
-                                    href="#"
-                                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                                >
-                                    Checkout
-                                </a>
+
+                                <button onClick={submitCheckout} className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</button>
                             </div>
                             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                 <p>
