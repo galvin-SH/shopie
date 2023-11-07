@@ -46,7 +46,7 @@ const Product = (product) => {
                         <li>
                             $ {salePrice.toFixed(2)}
                         </li>
-                        <button type="button" className="text-black #D1D5DB focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm  text-center inline-flex items-center ">
+                        <button onClick={addToCart} type="button" className="text-black #D1D5DB focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm  text-center inline-flex items-center ">
                             <ShoppingBagIcon className=" w-4 cursor-pointer text-gray hover:scale-150 ease-in duration-300" />
                             {/* <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" /> */}
                         </button>
@@ -79,7 +79,6 @@ const Product = (product) => {
                             <div className="flow-root">
                                 <ul role="list" className="-my-6 divide-y divide-gray-200">
                                     <li key={product.id} className="flex py-6">
-
                                         <div className="ml-4 flex flex-1 flex-col">
                                             <div>
                                                 <div className="flex justify-around text-base font-medium text-gray-900">
@@ -94,7 +93,6 @@ const Product = (product) => {
                                                             <p className="ml-4 text-lg">
                                                                 In Stock: {quantity}
                                                             </p>
-
                                                         </li>
                                                         <li className="p-1" >
                                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi exercitationem quisquam eveniet eligendi rerum quod aliquam possimus.
@@ -117,7 +115,7 @@ const Product = (product) => {
                                     <button
                                         type="button"
                                         className="text-xl text-indigo-600 hover:text-indigo-500"
-                                        onClick={() => setOpenModal(false)}
+                                        onClick={() => {setOpenModal(false); addToCart();}}
                                     >
                                         Add to Cart
                                         <span aria-hidden="true"> &rarr;</span>
