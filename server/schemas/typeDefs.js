@@ -3,11 +3,14 @@ const typeDefs = `
     _id: ID
     email: String
     password: String
+    orders: [Order]
   }
+
   type Category {
     _id: ID
     categoryName: String
   }
+
   type Product {
     _id: ID
     productName: String
@@ -29,6 +32,24 @@ const typeDefs = `
     user: User
   }
 
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
+  type Checkout {
+    session: ID
+  }
+
+  input ProductInput {
+    _id: ID
+    purchaseQuantity: Int
+    productName: String
+    salePrice: Float
+    quantity: Int
+  }
+
   type Query {
     getSingleUser: User
     getAllUsers: [User]
@@ -36,18 +57,15 @@ const typeDefs = `
     getAllCategories: [Category]
     getSingleProduct(productId: ID!): Product
     getAllProducts: [Product]
+    order(_id: ID!): Order
+    checkout(products: [ProductInput]): Checkout
   }
 
 
   type Mutation {
     createUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    createCategory(categoryName: String!): Category
-    updateCategory(categoryId: ID!, categoryName: String!): Category
-    deleteCategory(categoryId: ID!): Category
-    createProduct(productName: String!, productDescription: String!, productPrice: Float!, productCategory: ID!,onSale: Boolean,saleFactor: Float, imageSrc: String!): Product
-    updateProduct(productId: ID!, productName: String!, productDescription: String!, productPrice: Float!, productCategory: ID!): Product
-    deleteProduct(productId: ID!): Product
+    addOrder(products: [ID]!): Order
   }
 `;
 
