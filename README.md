@@ -20,5 +20,6 @@ The motive behind this project was to build a MERN Stack single page application
 
 ![Screenshot of website](./client/src/assets/SNACK-HAPPY.png)
 
+
 ## Video Demo Link
 [Click here for deployed link](https://damp-bayou-26639-6c0434c98fff.herokuapp.com/)
